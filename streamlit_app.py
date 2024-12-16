@@ -9,7 +9,7 @@ def show_login_page():
     st.markdown(
         """
         <h1 style="text-align: center; color: skyblue;">
-             Login to Access the Dashboard
+             LOGIN PAGE
         </h1>
         """,
         unsafe_allow_html=True,
@@ -17,10 +17,10 @@ def show_login_page():
     st.markdown("<hr>", unsafe_allow_html=True)
 
     # Input fields for username and password
-    username = st.text_input("Username:")
-    password = st.text_input("Password:", type="password")
+    username = st.text_input("USERNAME:")
+    password = st.text_input("PASSWORD:", type="password")
 
-    if st.button("Login"):
+    if st.button("LOGIN"):
         # Simple authentication logic
         if username == "admin" and password == "password123":
             st.session_state["authenticated"] = True

@@ -19,7 +19,7 @@ def show_login_page():
     st.markdown(
         """
         <h1 style="text-align: center; color: skyblue;">
-             Login to Access the Dashboard
+             LOGIN PAGE
         </h1>
         """,
         unsafe_allow_html=True,
@@ -27,10 +27,10 @@ def show_login_page():
     st.markdown("<hr>", unsafe_allow_html=True)
 
     # Input fields for username and password
-    username = st.text_input("Username:")
-    password = st.text_input("Password:", type="password")
+    username = st.text_input("USERNAME:")
+    password = st.text_input("PASSWORD:", type="password")
 
-    if st.button("Login"):
+    if st.button("LOGIN"):
         # Authentication logic
         if username in st.session_state["users"] and st.session_state["users"][username] == password:
             st.session_state["authenticated"] = True
@@ -40,7 +40,7 @@ def show_login_page():
             st.error("Invalid username or password!")
 
     # Button to navigate to the sign-up page
-    if st.button("Sign Up"):
+    if st.button("SIGN UP"):
         st.session_state["show_signup"] = True
         st.rerun()
 
@@ -49,7 +49,7 @@ def show_signup_page():
     st.markdown(
         """
         <h1 style="text-align: center; color: green;">
-             Sign Up to Create an Account
+             SIGN UP TO CREATE AN ACCAOUNT
         </h1>
         """,
         unsafe_allow_html=True,
